@@ -1,0 +1,17 @@
+---
+import "@/styles/tailwind.css"
+
+type Props = {
+  title: string;
+  styles: any;
+}
+
+
+const { title, styles } = Astro.props as Props;
+---
+
+<section class={styles}>
+  <span class="text-[#3F3D56] font-code-mono-bold">&lt;{title}&gt;</span>
+  <slot />
+  <span class="text-[#3F3D56] font-code-mono-bold">&lt;/{title}&gt;</span>
+</section>

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  src: url('/IBM_Plex_Mono/IBMPlexMono-Bold.ttf');
+  font-family: 'IBMPlexMono-Bold';
+}
+
+@font-face {
+  src: url('/IBM_Plex_Mono/IBMPlexMono-Regular.ttf');
+  font-family: 'IBMPLexMono-Regular';
+}
