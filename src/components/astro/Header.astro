@@ -1,19 +1,14 @@
 ---
 // @ts-nocheck
 import { Image } from '@astrojs/image/components'
-
-type Props = {
-  image: string
-}
-
-const { image } = Astro.props as Props
+import me from '@/images/me.webp'
 ---
 
 <div class="flex justify-center ml-16 md:ml-32">
   <div class="mt-14 mb-16 relative">
     <div class="bg-[#00FFFF] absolute w-52 rounded-3xl left-2 -top-2 h-full" />
     <div class="relative w-52 overflow-hidden rounded-3xl">
-      <Image src={image} width={1200} aspectRatio='3:4' />
+      <Image src={me} width={1200} aspectRatio='3:4' />
     </div>
   </div>
 </div>

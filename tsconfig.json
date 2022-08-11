@@ -6,7 +6,8 @@
       "@/astro/*": ["src/components/astro/*"],
       "@/react/*": ["src/components/react/*"],
       "@/public/*": ["public/*"],
-      "@/styles/*": ["src/styles/*"]
+      "@/styles/*": ["src/styles/*"],
+      "@/images/*": ["src/images/*"]
     },
     // Enable top-level await, and other modern ESM features.
     "target": "ESNext",
