@@ -1,44 +1,59 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import Section from '@/astro/Section.astro'
-import Header from '@/astro/Header.astro'
+import Section from '@/astro/Section.astro';
+import Header from '@/astro/Header.astro';
 
 const about = `
     I enjoy solving puzzles and reading documentation.
     I'm a React developer by day and a Rustacean by night.
     I also like food. And coffee. Sometimes tea too, but not with milk.
     That's just wrong.
-    `
+    `;
 
 const contact = [
   {
-    name: "Email", link: "mailto:botondnagy98@icloud.com?subject=your subject goes here&body=tell me what you want what you really really want"
+    name: 'Email',
+    link: 'mailto:nagybotond@botnod.com?subject=your subject goes here&body=tell me what you want what you really really want',
   },
-  { name: "Instagram", link: "https://instagram.com/botnod" },
-  { name: "Facebook", link: "https://facebook.com/therealbotnod" },
-  { name: "Keybase", link: "https://keybase.io/blueonions" }
-]
-
-
-
+  { name: 'Instagram', link: 'https://instagram.com/botnod' },
+  { name: 'Facebook', link: 'https://facebook.com/therealbotnod' },
+  { name: 'Keybase', link: 'https://keybase.io/blueonions' },
+];
 ---
 
-<Layout title="Hi it's me @botnod">
+<Layout title={`Hi it's me @botnod`}>
   <Header />
-  <Section styles="max-w-xl mx-auto" title="about">
-    <p class="text-[#00FFFF] text-sm md:text-base font-code-mono leading-loose py-2 mx-4">{about}
+  <Section styles='max-w-xl mx-auto' title='about'>
+    <p
+      class='text-[#00FFFF] text-sm md:text-base font-code-mono leading-loose py-2 mx-4'>
+      {about}
     </p>
   </Section>
-  <Section styles="max-w-xl mx-auto mt-10" title="contact">
-    <ul class="text-[#00FFFF] text-sm md:text-base font-code-mono leading-loose gap-x-6 flex justify-start mx-4 py-2">
-      {contact.map(el => <li><a class="transition-all md:hover:font-code-mono-bold" target="_blank"
-          href={el.link}>{el.name}</a></li>)}
+  <Section styles='max-w-xl mx-auto mt-10' title='contact'>
+    <ul
+      class='text-[#00FFFF] text-sm md:text-base font-code-mono leading-loose gap-x-6 flex justify-start mx-4 py-2'>
+      {
+        contact.map(el => (
+          <li>
+            <a
+              class='transition-all md:hover:font-code-mono-bold'
+              target='_blank'
+              href={el.link}>
+              {el.name}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </Section>
-  <Section styles="max-w-xl mx-auto my-10" title="projects">
-    <p class="text-[#00FFFF] text-sm md:text-base font-code-mono leading-loose py-2 mx-4">Take a
-      look at my <a class="underline hover:font-code-mono-bold" target="_blank"
-        href="https://github.com/westernwontons">github</a>
+  <Section styles='max-w-xl mx-auto my-10' title='projects'>
+    <p
+      class='text-[#00FFFF] text-sm md:text-base font-code-mono leading-loose py-2 mx-4'>
+      Take a look at my <a
+        class='underline hover:font-code-mono-bold'
+        target='_blank'
+        href='https://github.com/westernwontons'>github</a
+      >
     </p>
   </Section>
 </Layout>
