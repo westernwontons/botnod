@@ -1,26 +1,23 @@
 ---
-import "@/styles/tailwind.css"
+import '@/styles/tailwind.css';
 export interface Props {
-  title: string;
+	title: string;
 }
 
 const { title } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width' />
+		<meta name='description' content='Author: Nagy Botond, hot for Rust' />
+		<link rel='icon' type='image/x-icon' href='/favicon.ico' />
+		<title>{title}</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <meta name="description"
-    content="Author: Nagy Botond, aspiring Web Developer, father of two monitors and hot for React">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <title>{title}</title>
-</head>
-
-<body class="bg-[#0C1327] mx-4">
-  <slot />
-</body>
-
+	<body class='bg-[#0C1327] mx-4'>
+		<slot />
+	</body>
 </html>
